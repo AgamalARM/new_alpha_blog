@@ -1,6 +1,7 @@
 # README
 * add validates and crud from rails consol
-This README would normally document whatever steps are necessary to get the
+* add show and index actions
+* This README would normally document whatever steps are necessary to get the
 application up and running.
 
 Things you may want to cover:
