@@ -9,6 +9,7 @@ class ArticlesController < ApplicationController
     end
     
     def new
+        @article = Article.new ##for first time load page to prevent error
         
     end
     
@@ -16,8 +17,15 @@ class ArticlesController < ApplicationController
         @article = Article.new(params.require(:article).permit(:title,:description))
         #render plain: @article.inspect
         @article.save
-        redirect_to article_path(@article)
-        #redirect_to @article  -----OR
+        if @article.save
+            flash[:notice] = "This Article is created successfully"
+            redirect_to article_path(@article)
+            #redirect_to @article  -----OR
+        else
+            render 'new'
+        end
+            
+        
     
     end
     
