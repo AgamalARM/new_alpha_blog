@@ -1,5 +1,6 @@
 # README
 * add validates and crud from rails consol
+* Add Edit and update action 
 * add show and index actions
 * This README would normally document whatever steps are necessary to get the
 application up and running.
