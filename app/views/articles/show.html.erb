@@ -2,5 +2,8 @@
 <p><h3>Title : </h3><%= @article.title%></p>
 
 <p><h3>Description : </h3><%= @article.description%></p>
-
-<p><%= link_to "List for all Articles", articles_path%></p>
+<p> 
+  <%= link_to 'Edit', edit_article_path(@article) %> |
+  <%= link_to 'Delete', article_path(@article), method: :delete, data: {confirm: "Are you sure to delete?"}  %>
+</p>
+<p><%= link_to "Return to list of all Articles", articles_path%></p>
