@@ -1,4 +1,8 @@
 <h1>Listing of All Articles</h1>
+
+<% if @articles[0] != nil %>
+   <center><%= @articles[0].title%></center>
+<% end %>
 <table>
     <thead>
         <tr>
